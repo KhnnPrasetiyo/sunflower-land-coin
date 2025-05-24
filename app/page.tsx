@@ -1,15 +1,30 @@
-async function getData() {
-  const res = await fetch("https://sfl.world/api/v1/prices");
+import axios from "axios";
+const apiUrl = "https://sfl.world/api/v1/prices";
 
-  if (!res.ok) {
-    throw new Error("Failed to colllect prices data, please contact dev");
+async function fetchData() {
+  try {
+    // Make a GET request to the API endpoint
+    const response = await axios.get(apiUrl);
+
+    // Extract the data from the response
+    const data = response.data;
+
+    // Handle the data (e.g., log it to the console)
+    console.log(data);
+
+    // Return the data (optional)
+    return data;
+  } catch (error) {
+    // Handle errors (e.g., log the error message)
+    console.error("Error fetching data:");
+
+    // Throw the error to propagate it further (optional)
+    throw error;
   }
-
-  return res.json();
 }
 
 export default async function Home() {
-  const Data = await getData();
+  const Data = await fetchData();
   const cropsData = Data.data.p2p;
   const cropsUpadte_At = Data.updated_text;
   return (
