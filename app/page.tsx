@@ -1,5 +1,3 @@
-import { adapter } from "next/dist/server/web/adapter";
-
 async function getData() {
   const res = await fetch("https://sfl.world/api/v1/prices");
 
@@ -14,8 +12,6 @@ export default async function Home() {
   const Data = await getData();
   const cropsData = Data.data.p2p;
   const cropsUpadte_At = Data.updated_text;
-  const m = "Merino Wool";
-  const MerinoW = cropsData.m;
   return (
     <>
       <div className="-my-2 p-20 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 ">
