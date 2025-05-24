@@ -27,6 +27,7 @@ export default async function Home() {
   const Data = await fetchData();
   const cropsData = Data.data.p2p;
   const cropsUpadte_At = Data.updated_text;
+  const cropsUpadte_AtBin = Data.updated_text;
   return (
     <>
       <div className="-my-2 p-20 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 pr-10 lg:px-8 ">
@@ -35,7 +36,8 @@ export default async function Home() {
           perbaiki.
         </h1>
         <h2 className="m-auto text-center text-small font-bold uppercase text-orange-500 mb-10 px-3">
-          pastikan refresh halaman agar mendapat data terbaru!
+          pastikan refresh halaman agar mendapat data terbaru!time update :{" "}
+          {cropsUpadte_AtBin}
         </h2>
         <div className="align-middle inline-block min-w-full shadow overflow-hidden bg-white shadow-dashboard px-8 pt-3 rounded-bl-lg rounded-br-lg">
           <table className="min-w-full">
