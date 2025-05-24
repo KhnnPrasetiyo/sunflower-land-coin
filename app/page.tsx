@@ -36,7 +36,7 @@ export default async function Home() {
           perbaiki.
         </h1>
         <h2 className="m-auto text-center text-small font-bold uppercase text-orange-500 mb-10 px-3">
-          pastikan refresh halaman agar mendapat data terbaru!time update :{" "}
+          pastikan refresh halaman agar mendapat data terbaru! time update :{" "}
           {cropsUpadte_AtBin}
         </h2>
         <div className="align-middle inline-block min-w-full shadow overflow-hidden bg-white shadow-dashboard px-8 pt-3 rounded-bl-lg rounded-br-lg">
